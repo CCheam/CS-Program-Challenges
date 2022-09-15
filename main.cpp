@@ -1,14 +1,21 @@
 #include <iostream>
 #include <iomanip>
 int main() {
-  int year =1;
-  double rise =1.5;
-  std::cout<<"Table of amount of ocean rise assuming 1.5mm yearly rise"<<std::endl;
-  while(year<=25){
-    double amt=rise*year;
-    std::cout<<"Year: "<<year<<"   Rise Amount: "<<amt<<"mm"<<std::endl;
-    year++;
+  int num=1;
+  int years,months,total, mRain;
+  double avg;
+  std::cout<<"Input # of years: "<<std::endl;
+  std:cin>>years;
+  while(num<=years){
+    for(inti=0;i<12,i++){
+      std::cout<<"Input amount of rainfall for Month "<<i": "<<std::endl;
+      std:cin>>mRain;
+    total+=mRain;
+      months++;
+    }
+    num++;
   }
- 
+avg=total/months;
+std::cout<<"Total Months: "<<months<<std::endl;
   return 0;
 }
