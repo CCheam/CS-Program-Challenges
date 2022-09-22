@@ -1,14 +1,7 @@
 #include <iostream>
 #include <iomanip>
+using namespace std;
 int main() {
-  int inp;
-  std::cout<<"Input a #:"<<std::endl;
-  std::cin>>inp;
-for(int i =0;i<inp;i++){
-  for(int j=0;j<inp;j++){
-    std::cout<<"x";
-  }
-  std::cout<<std::endl;
-}
+  int numNum,sum=0;
   return 0;
   }
