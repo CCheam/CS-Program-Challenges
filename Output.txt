@@ -1,0 +1,3 @@
+Sum: 105527
+Total #s read: 200
+Average: 527
