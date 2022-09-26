@@ -1,30 +1,32 @@
-#include <iomanip>
 #include <iostream>
-#include <math.h>
 using namespace std;
 
-double PValueFunc(double &fVal,double &inr, int &y){
-  double PValue;
-  double q;
-q=pow(1+inr,y);
-  PValue=fVal/q;
-  return PValue;
+// Write the prototypes for the getLength,
+// getWidth, getArea, and displayData
+// functions here.
+
+int main()
+{
+   double length,    // The rectangle's length
+          width,     // The rectangle's width
+          area;      // The rectangle's area
+          
+   // Get the rectangle's length.
+   length = getLength();
+   
+   // Get the rectangle's width.
+   width = getWidth();
+   
+   // Get the rectangle's area.
+   are = getArea();
+   
+   // Display the rectangle's data.
+   displayData(length, width, area);
+          
+   return 0;
 }
 
-int main() {
-  int years;
-  double interest,fValue,pValue;
-//input values
-cout<<"Input future value that you want: "<<endl;
-cin>>fValue;
-cout<<"Input interest rate as a decimal: "<<endl;
-cin>>interest;
-cout<<"Input # of years money will collect interest for:"<<endl;
-cin>>years;
-  //function
-  pValue=PValueFunc(fValue,interest,years);
-  //output
-  cout<<"You need to deposit $"<<pValue<<" to have $"<<fValue<<" in "<<years<<" years";
-  return 0;
-}
+//***************************************************
+// You must write the getLength, getWidth, getArea, *
+// and displayData functions.                       *
 
