@@ -6,8 +6,8 @@ int main() {
   ifstream c;
   ofstream oFile;
   int sum=0;
-  int i,avg;
-  double numNum;
+  int i;
+  double numNum,avg;
   c.open("Random.txt");
   while(c>>i){
     sum+=i;
