@@ -1,4 +1,4 @@
-/*
+
 #include <iomanip>
 #include <iostream>
 #include <cstdio>
@@ -81,4 +81,3 @@ wrongQs=findWrongQuestions(ansArray,ansInp);
   printWrongQuestions(wrongQs);
   return 0;
 }
-*/
