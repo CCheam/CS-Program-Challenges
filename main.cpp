@@ -52,14 +52,14 @@ vector <int> wrongQs;
   bool pass=false;
   //input
   for(int i=0;i<20;i++){
-    while(1){
       cout<<"Input an answer for Question "<<i+1<<" (A,B,C,D):"<<endl;
+    while(1){
     cin>>ansInp[i];
       if(isalpha(ansInp[i])){
         break;
       }
       else{
-        cout<<"Not a letter, try again!";
+        cout<<"Not a letter, try again!"<<endl;
         cin>>ansInp[i];
       }
     }
