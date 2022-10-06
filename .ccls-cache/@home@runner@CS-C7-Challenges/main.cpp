@@ -62,6 +62,11 @@ int getLowestInRow(int (&arr)[col][row],int rw){
 int main() {
 int lowest = 0;
 int grid[col][row] = {{8,0,3,6}, {19,14,7,8}, {15,4,11,10},{1,5,11,6}};
- cout<<getLowestInRow(grid,3);
+  cout<<getAverage(grid)<<endl;
+  cout<<getTotal(grid)<<endl;
+  cout<<getColumnTotal(grid,0)<<endl;
+  cout<<getRowTotal(grid,1)<<endl;
+cout<<getHighestInRow(grid,2)<<endl;
+ cout<<getLowestInRow(grid,3)<<endl;
   return 0;
 }
