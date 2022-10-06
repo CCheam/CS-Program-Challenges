@@ -1,3 +1,4 @@
+/*
 #include <iomanip>
 #include <iostream>
 #include <cstdio>
@@ -17,9 +18,10 @@ int getTotal(int arr[col][row]){
   }
   return sum;
 }
-int alt() {
+int main() {
 int lowest = 0;
 int grid[col][row] = {{8,0,3,6}, {19,14,7,8}, {15,4,11,10},{1,5,11,6}};
   cout<<(getTotal(grid));
   return 0;
 }
+*/

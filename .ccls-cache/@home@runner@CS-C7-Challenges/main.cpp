@@ -1,82 +1,67 @@
 #include <iomanip>
 #include <iostream>
 #include <cstdio>
-#include <vector>
 #include <ctype.h>
 using namespace std;
 
-int scoring(char ans[],char inp[]){
-  int sc=0;
-  for(int i=0;i<20;i++){
-    if(inp[i] ==ans[i]){
-      sc++;
-    }
-  }
-  return sc;
-}
+const int col=4;
+const int row=4;
 
-bool PassCheck(char ans[],char inp[]){
-bool p=false;
-  int s=0;
-  s=scoring(ans,inp);
-  if(s>=15){
-    p=true;
-  }
-  return p;
-}
-
-vector<int> findWrongQuestions(char ans[], char inp[]){
-  vector<int> wrong;
-  for(int i=0;i<20;i++){
-    if(inp[i] !=ans[i]){
-      wrong.push_back(i+1);
-    }
-  }
-  return wrong;
-}
-
-void printWrongQuestions(vector<int> wQ){
-  cout<<"Questions ";
-  for(int i=0;i<wQ.size();i++){
-    cout<<wQ.at(i)<<", ";
-  }
-  cout<<" were wrong";
-}
-
-int main() {
-  //Setup
-char ansArray[]={'B','D','A','A','C','A','B','A','C','D','B','C','D','A','D','C','C','B','D','A'};
-char ansInp[20];
-vector <int> wrongQs;
-  int score=0;
-  bool pass=false;
-  //input
-  for(int i=0;i<20;i++){
-      cout<<"Input an answer for Question "<<i+1<<" (A,B,C,D):"<<endl;
-    while(1){
-    cin>>ansInp[i];
-      if(isalpha(ansInp[i])){
-        break;
-      }
-      else{
-        cout<<"Not a letter, try again!"<<endl;
-        cin>>ansInp[i];
-      }
+int getTotal(int (&arr)[col][row]){
+  int sum=0;
+  for(int i=0;i<row;i++){
+    for(int j=0;j<col;j++){
+      sum+=arr[i][j];
     }
     
   }
-pass=PassCheck(ansArray,ansInp);
-score=scoring(ansArray,ansInp);
-wrongQs=findWrongQuestions(ansArray,ansInp);
-//output
-  if(pass==true){
-    cout<<"You have passed the written portion of the driving exam!"<<endl;
+  return sum;
+}
+
+double getAverage(int (&ar)[col][row]){
+  double avg=0;
+  avg=((double)getTotal(ar))/(col*row);
+  return avg;
+}
+
+int getRowTotal(int (&arr)[col][row],int rw){
+  int sum=0;
+  for(int i=0;i<col;i++){
+    sum+=arr[rw][i];
   }
-  else{
-    cout<<"You didn't pass."<<endl;
+  return sum;
+}
+
+int getColumnTotal(int (&arr)[col][row],int cl){
+  int sum=0;
+  for(int i=0;i<col;i++){
+    sum+=arr[i][cl];
   }
-  cout<<score<<" answers were correct"<<endl;
-  cout<<20-score<<" answers were incorrect"<<endl;
-  printWrongQuestions(wrongQs);
+  return sum;
+}
+
+int getHighestInRow(int (&arr)[col][row],int rw){
+  int high=0;
+  for(int i=0;i<col;i++){
+    if(arr[rw][i]>high){
+      high=arr[rw][i];
+    }
+  }
+  return high;
+}
+
+int getLowestInRow(int (&arr)[col][row],int rw){
+  int low=2147483647;
+  for(int i=0;i<col;i++){
+    if(arr[rw][i]<low){
+      low=arr[rw][i];
+    }
+  }
+  return low;
+}
+int main() {
+int lowest = 0;
+int grid[col][row] = {{8,0,3,6}, {19,14,7,8}, {15,4,11,10},{1,5,11,6}};
+ cout<<getLowestInRow(grid,3);
   return 0;
 }
