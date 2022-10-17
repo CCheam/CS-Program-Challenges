@@ -1,4 +1,3 @@
-/*
 #include <iomanip>
 #include <iostream>
 #include<cstdio>
@@ -27,4 +26,3 @@ int arr[]={  13579, 26791, 26792 ,33445, 55555,62483,77777,79422, 85647, 93121  
   }
   return 0;
 }
-*/

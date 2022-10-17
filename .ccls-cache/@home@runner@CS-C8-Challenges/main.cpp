@@ -1,29 +1,19 @@
-#include <iomanip>
-#include <iostream>
-#include<cstdio>
+ #include <iostream>
+ #include <string>
+ using namespace std;
 
-using namespace std;
+ int main()
+ {
+ const int NUM_NAMES = 20;
+ string names[NUM_NAMES] = {"Collins, Bill", "Smith, Bart", "Allen, Jim",
+ "Griffin, Jim", "Stamey, Marty", "Rose, Geri",
+ "Taylor, Terri", "Johnson, Jill",
+ "Allison, Jeff", "Looney, Joe", "Wolfe, Bill",
+ "James, Jean", "Weaver, Jim", "Pore, Bob",
+ "Rutherford, Greg", "Javens, Renee",
+ "Harrison, Rose", "Setzer, Cathy",
+ "Pike, Gordon", "Holland, Beth" };
 
-bool checkFor(int arr[],int in){
+ // Insert your code to complete this program
 
-for(int i=0;i<sizeof(arr);i++){
-  if(arr[i]==in){return true;}
-  else{return false;}
-}
-}
-int main() {
-  int inp;
-  bool valid;
-int arr[]={  13579, 26791, 26792 ,33445, 55555
-,62483, 77777 ,79422, 85647, 93121  };
-  cout<<"Input Winning Ticket #"<<endl;
-  cin>>inp;
-  valid=checkFor(arr,inp);
-  if(valid){
-    cout<<"Valid Account #"<<endl;
-  }
-  else{
-    cout<<"Invalid Account #";
-  }
-  return 0;
-}
+ return 0;

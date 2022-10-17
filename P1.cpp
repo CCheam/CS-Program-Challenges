@@ -15,15 +15,15 @@ for(int i=0;i<sizeof(arr);i++){
 int main() {
   int inp;
   bool valid;
-int arr[]={  13579, 26791, 26792 ,33445, 55555,62483,77777,79422, 85647, 93121  };
-  cout<<"Input Winning Ticket #"<<endl;
+int arr[]={5658845, 4520125, 7895122 ,8777541 ,8451277, 1302850,8080152,4562555,5552012,5050552,7825877, 1250255,1005231,6545231,3852085,7576651,7881200,4581002};
+  cout<<"Input charge account #"<<endl;
   cin>>inp;
   valid=checkFor(arr,inp);
   if(valid){
-    cout<<"Winning Ticket!"<<endl;
+    cout<<"Valid Account #"<<endl;
   }
   else{
-    cout<<"Not a winner....";
+    cout<<"Invalid Account #";
   }
   return 0;
 }
