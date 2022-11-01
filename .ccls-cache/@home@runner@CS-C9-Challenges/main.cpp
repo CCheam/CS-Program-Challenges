@@ -3,19 +3,27 @@
 #include <iostream>
 using namespace std;
 
-int doSomething(int *x, int *y) {
-int temp=*x;
-  *x = *y * 10;
-  *y = temp * 10;
-  return *x + *y;
-}
+int modeFunc(int *a, int s);
 int main() {
-  int a, b,e;
-  int *c = &a;
-  int *d = &b;
-  a = 5;
-  b = 7;
-e=doSomething(c, d);
-  cout << a<<" "<<b<<" "<<e;
+  const int size = 2;
+  int data[size];
+  int *a = data;
   return 0;
 }
+
+int modeFunc(int *a, int s) {
+  int maxV = 0;
+  int mcount = 0;
+  for (int i = 0; i < s; i++) {
+    int count = 0;
+    for (int j = 0; j < s; j++) {
+      if ((a[i] == a[j])) {
+        count++;
+      }
+    }
+  }
+
+  if (mcount == 1) {
+    return -1;
+  }
+};
